@@ -1,0 +1,17 @@
+create table student(sno INT,name VARCHAR(20),marks INT,dept VARCHAR(15));
+insert into student values(11,'ram',50,'mechanical'),(22,'sree',40,'civil');
+select * from student;
+alter table student ADD age int;
+select * from student;
+alter table student modify dept CHAR(10);
+alter table student drop marks;
+select * from student;
+alter table student rename to students;
+delete from students;
+select * from students;
+drop table students;
+
+-- Your code here!
+
+
+

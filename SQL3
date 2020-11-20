@@ -1,0 +1,7 @@
+create table Employee (empid CHAR(4),name char(10),designation char(30),dob date,salary numeric);
+insert into Employee values ('e1','Ram','HR','2020-05-15',25000),('M11','Saran','Pt','2020-05-28',5000);
+create table EmployeeDetials(empid char(4),name char(10),salary numeric,age int);
+insert into EmployeeDetials values('g1','Sam',5000,25),('d11','Suraj',10000,20),('e1','Ram',25000,27);
+select * from Employee where empid IN (select empid from EmployeeDetials);
+select * from Employee where empid not in (select empid from EmployeeDetials);
+

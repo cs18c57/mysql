@@ -1,0 +1,20 @@
+create database constraints;
+use constraints;
+create table Department
+(code int PRIMARY KEY,
+title char(10),
+Dept_name char(20),
+Dept_id char(10),
+salary int,
+UNIQUE (Dept_name));
+insert into Department values(201,'coding','cs','cs1',1500),(302,'wiring','ec','ec2',2500);
+select * from Department where salary>2000;
+create table Instructor
+(name char(20) NOT NULL,
+code int,
+Id char(10) DEFAULT 'c10');
+insert into Instructor values('sree',101,'c10'),('ram',201,'c10');
+select * from Instructor;
+
+
+

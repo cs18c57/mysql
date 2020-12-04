@@ -1,0 +1,15 @@
+CREATE TABLE class(name char(20),id int);
+INSERT INTO class VALUES('Sreenish',567),('Lavanya',254);
+SELECT * FROM class;
+INSERT INTO class VALUES('Merin',142);
+ROLLBACK;
+INSERT INTO class VALUES('Rahul',582);
+COMMIT;
+UPDATE class SET name = 'Abhijit' WHERE id = '582';
+SAVEPOINT A;
+INSERT INTO class VALUES('Chris',587);
+SAVEPOINT B;
+INSERT INTO class VALUES('Bravo',256);
+SAVEPOINT C;
+SELECT * FROM class;
+INSERT INTO class VALUES('Ram',514);

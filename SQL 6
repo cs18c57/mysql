@@ -1,0 +1,12 @@
+-- a.Create a table store. Fields are order no, code, item, quantity, price, discount, mrp!
+create table store(order_no int,code int,item_name varchar(10),quantity int,price int,discount int,mrp int);
+-- b.Inset values into the table!
+insert into store values (1,302,'soap',2,40,3,43),(2,540,'rice',5,48,5,53);
+-- c.Display the table
+select * from store;
+-- d. Create a view with item_name and quantity for the above table
+create view store123 as select item_name,quantity from store;
+-- e.Write a query to check whether any changes made to present table is reflected in view.
+select * from store123;
+-- f. Write a query to delete a view
+drop view store123;

@@ -1,0 +1,30 @@
+-- a.	Create a table store. Fields are order no, code, item, quantity, price, discount, mrp
+create table store (order_no int,code varchar(10),item char(20),quantity int,price int,discount int,mrp int);
+-- b.	Insert values into the table
+insert into store values (1,'as4','soap',2,45,5,50),(2,'as3','pen',3,7,1,8);
+-- c.	Display the table
+select * from store;
+-- d.	Write an SQL query to display the reminder, if the amount of an each item in store is divided by 9.
+select mod(price,9) from store;
+-- e.	Write SQL query to display the amount in store and its square
+select power(price,2) from store;
+-- f. Write SQL query to divide the amount in stock of each item by 7 in store table and display the result round to the nearest integer.
+select round(mrp div 7) from store;
+
+
+
+
+OUTPUT
+
+order_no	code	item	quantity	price	discount	mrp
+1	as4	soap	2	45	5	50
+2	as3	pen	3	7	1	8
+mod(price,9)
+0
+7
+power(price,2)
+2025
+49
+round(mrp div 7)
+7
+1

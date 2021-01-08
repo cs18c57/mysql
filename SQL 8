@@ -1,0 +1,16 @@
+-- 1.Create a table Employee with following specifications.Code, name, DOB, designation, salary.
+create table Employee(code int,name char(20),DOB date,designation char(30),salary int);
+-- 2. Insert values into the table.
+insert into Employee values(301,'Harish','1996-02-21','HR',25000),(251,'Davish','1999-07-16','clerk',15000),(214,'Sam','1994-05-04','clerk',20000);
+-- 3. Display sum of salaries from the table employee where designation is clerk.
+select sum(salary) from Employee where designation='clerk';
+-- 4. Describe the maximum salary value from the table employee.
+select max(salary) from Employee;
+-- 5.Display average salary of employees.
+select avg(salary) from Employee;
+-- 6. Describe the minimum salary value from the table.
+select min(salary) from Employee;
+-- 7. Display the total number of employees.
+select count(code) from Employee;
+
+

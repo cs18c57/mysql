@@ -14,3 +14,15 @@ select min(salary) from Employee;
 select count(code) from Employee;
 
 
+OUTPUT
+
+sum(salary)
+35000
+max(salary)
+25000
+avg(salary)
+20000.0000
+min(salary)
+15000
+count(code)
+3

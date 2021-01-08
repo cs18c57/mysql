@@ -1,0 +1,21 @@
+-- 1.Create table employee with fields Code , name , dob , designation , salary.
+create table employee(code int,name char(20),dob date,designation char(10),salary int);
+insert into employee values(351,'Hari','1998-05-17','CEO',50000),(251,'Sreeniv','1986-07-16','HR',25000);
+-- 2.Display code, name, and designation in descending order of the name.
+select code,name,designation from employee order by name desc;
+-- 3.Create table deposit with fields baccno , branch_name , amount.
+create table deposit(baccno int,branch_name char(20),amount int);
+insert into deposit values(19875555,'Ernakulam',2570000),(19871111,'Aroor',257111),(19872222,'Aluva',2501110),(19873333,'Aluva',541470);
+-- 4.Give branch name and details of deposit table.
+select branch_name,count(baccno),sum(amount) from deposit group by branch_name;
+
+
+OUTPUT
+
+code	name	designation
+251	Sreeniv	HR
+351	Hari	CEO
+branch_name	count(baccno)	sum(amount)
+Ernakulam	1	2570000
+Aroor	1	257111
+Aluva	2	3042580
